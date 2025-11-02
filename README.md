@@ -68,6 +68,20 @@ All examples/libraries listed below have no generative AI used in any step/part 
 
 <img src="https://github.com/NiklasKiuru/unityExamples/blob/main/Documentation/terrain_lod.gif">
 
+## 2D Fog of war
+
+<img src="https://github.com/NiklasKiuru/unityExamples/blob/main/Documentation/fow.gif">
+
+* Simple effect, very complicated solution
+    - Uses ray polygon intersection tests in a compute shader
+    - Can be used in a non persistent (left side of the screen in video) or persistent mode (right side of the screen in video)
+    - The effect is sliced into rectangular chunks that hold a simple sprite renderer
+    - Each chunk has a render texture which holds the opacity value for the fog. This texture simply overrides the sprite renderers texture opacity in the shader
+    - The fog system tracks which chunks are visible and contain active fog dissipators to compute the fog on the screen
+    - Pretty much any geometry can be either active dissipator or permanent occluder
+    - Performance impact is practically non existent
+The main reason I made this was because while searching from the asset store no available tools I found had options for saving the state of the fog on disc. Most examples I found from the web used sprite masking as the main technique which makes my approach quite unique and far more flexible.
+
 ## Ocean shader
 
 <img src="https://github.com/NiklasKiuru/unityExamples/blob/main/Documentation/ocean.gif">
