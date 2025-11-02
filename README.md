@@ -80,7 +80,8 @@ All examples/libraries listed below have no generative AI used in any step/part 
     - The fog system tracks which chunks are visible and contain active fog dissipators to compute the fog on the screen
     - Pretty much any geometry can be either active dissipator or permanent occluder
     - Performance impact is practically non existent
-The main reason I made this was because while searching from the asset store no available tools I found had options for saving the state of the fog on disc. Most examples I found from the web used sprite masking as the main technique which makes my approach quite unique and far more flexible.
+
+The main reason I made this was because while searching the asset store no available tools I found had options for saving the state of the fog on disc. Most examples I found from the web used sprite masking as the main technique which makes my approach quite unique and far more flexible.
 
 ## Ocean shader
 
